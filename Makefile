@@ -3,7 +3,7 @@ CXXFLAGS = -Wall -g -fopenmp
 
 SRC = main.cpp args.cpp search.cpp
 OBJ = $(SRC:.cpp=.o)
-TARGET = main
+TARGET = bin/main
 
 all: $(TARGET)
 
