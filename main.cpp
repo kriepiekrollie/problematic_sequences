@@ -4,8 +4,6 @@
 #include "field.h"
 #include "search.h"
 
-int MOD;
-
 int main(int argc, char **argv)
 {
     parse_args(argc, argv);
