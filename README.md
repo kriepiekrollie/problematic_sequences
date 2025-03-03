@@ -9,7 +9,7 @@ Compile the code by running `make` in the root directory.
 
 `./bin/main -f 5 -l 22 -s -1 -p`
 
-Will find search for a problematic sequence of length 22 (`-l 22`)
+Will search for a problematic sequence of length 22 (`-l 22`)
 in the finite field with 5 elements (`-f 5`),
 and stop after finding the first one (`-s`).
 It will also only search through sequences that start at 1 (`-1`).
