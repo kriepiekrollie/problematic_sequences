@@ -89,7 +89,6 @@ bool search(int dep)
             for (const T &x : mu)
                 std::cout << x << ", ";
             std::cout << std::endl;
-            std::cout << std::endl;
         }
         return true;
     }
