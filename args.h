@@ -8,6 +8,7 @@ struct Arguments {
     bool print_sequence;
     bool print_counts;
     bool print_m_values;
+    bool print_b_values;
     bool stop_after_first;
     bool time;
 };

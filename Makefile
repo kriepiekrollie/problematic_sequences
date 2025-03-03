@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -Wall -g -fopenmp
 
-SRC = main.cpp args.cpp search.cpp
+SRC = main.cpp args.cpp fp.cpp
 OBJ = $(SRC:.cpp=.o)
 TARGET = main
 

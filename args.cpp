@@ -43,14 +43,15 @@ void parse_args(int argc, char **argv)
     args.print_sequence = false;
     args.print_counts = false;
     args.print_m_values = false;
+    args.print_b_values = false;
     args.stop_after_first = false;
     args.time = false;
     for (int i = 1; i < argc; ) {
         std::string arg = argv[i++];
         if (arg == "-f" || arg == "--field") {
             args.field = parse_int(argc, argv, i++);
-            if (!is_prime(args.field)) {
-                std::cerr << "ERROR: Field order must be prime." << std::endl;
+            if (!(args.field == 4 || is_prime(args.field))) {
+                std::cerr << "ERROR: Field order must be prime or four." << std::endl;
                 exit(1);
             }
         } else if (arg == "-l" || arg == "--length") {
@@ -67,6 +68,8 @@ void parse_args(int argc, char **argv)
             args.print_counts = true;
         } else if (arg == "-m" || arg == "--mvals") {
             args.print_m_values = true;
+        } else if (arg == "-b" || arg == "--bvals") {
+            args.print_b_values = true;
         } else if (arg == "-s" || arg == "--stop") {
             args.stop_after_first = true;
         } else if (arg == "-t" || arg == "--time") {
@@ -80,6 +83,7 @@ void parse_args(int argc, char **argv)
             std::cerr << "  -p / --print" << std::endl;
             std::cerr << "  -c / --counts" << std::endl;
             std::cerr << "  -m / --mvals" << std::endl;
+            std::cerr << "  -b / --bvals" << std::endl;
             std::cerr << "  -s / --stop" << std::endl;
             std::cerr << "  -t / --time" << std::endl;
             exit(1);
